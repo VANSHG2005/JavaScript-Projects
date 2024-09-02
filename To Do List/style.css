@@ -36,5 +36,16 @@ body{
     font-weight: 700;
     margin-left: 8px;
     cursor: pointer;
+    padding: 12px 24px;
 }
-
+.input-container.input[type = "text"]:hover{
+    background-color: #60b160;
+}
+ul{
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
