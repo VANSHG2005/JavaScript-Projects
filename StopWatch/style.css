@@ -1,0 +1,125 @@
+/* Modern futuristic stopwatch with glowing effects */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.stopwatch {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.timerDisplay {
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+#startBtn {
+    background: #28a745;
+    color: white;
+    border-bottom: 3px solid #1e7e34;
+}
+
+#stopBtn {
+    background: #dc3545;
+    color: white;
+    border-bottom: 3px solid #b21f2d;
+}
+
+#resetBtn {
+    background: #007bff;
+    color: white;
+    border-bottom: 3px solid #0056b3;
+}
+
+#flagBtn {
+    background: #ffca28;
+    color: black;
+    border-bottom: 3px solid #ffb300;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 8px 25px rgba(255, 255, 255, 0.5);
+    opacity: 0.95;
+}
+
+.laps {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
+    width: 80%;
+    text-align: center;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.laps li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
